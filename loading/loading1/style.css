@@ -1,0 +1,133 @@
+html {
+    height: 100%;
+}
+body{
+    background-image: linear-gradient(0deg,rgb(104, 138, 211),rgb(16, 72, 190));
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+}
+
+#box{
+    /* background-image: linear-gradient(0deg,rgb(177, 57, 127),rgb(166, 176, 196)); */
+    
+    height: 60px;
+    width: 60px;
+    background-color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin: 0;
+    animation-name: jump;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+#shadow{
+    width: 40px;
+    background-color: black;
+    /* height: 2px; */
+    /* height: 2px; */
+    box-shadow: 7px 2px 30px 10px black;
+    animation-name: shad;
+    border-radius: 50%;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    top: 64.5vh;
+    left: 50.5vw;
+}
+@keyframes shad {
+    50%{
+        width:20px ;
+        box-shadow: 10px 3px 5px 2px rgb(14, 12, 12) ;
+    }
+    100%{
+        width: 40px;
+        box-shadow: 7px 2px 30px 10px rgb(10, 9, 9);
+    }
+}
+@keyframes jump {
+    12.5%{
+        transform: translateY(70px) rotate(45deg);
+        border-bottom-right-radius: 50%;
+    }
+    15%{
+        border-radius: 0px;
+    }
+    25%{
+        
+        transform: rotate(90deg);
+        border-radius: 0px;
+
+    }
+    37.5%{
+
+        transform: translateY(70px) rotate(135deg);  
+        border-top-right-radius: 50%;
+    }
+    41%{
+        border-radius: 0px;
+    }
+    50%{
+
+        transform: rotate(180deg);
+        border-radius: 0px;
+    }
+    62.5%{
+
+        transform:translateY(70px) rotate(225deg);
+        border-top-left-radius: 50%;
+    }
+    66%{
+        border-radius: 0px;
+    }
+    75%{
+
+        transform: rotate(270deg)  ;
+        border-radius: 0px;
+    }
+    87.5%{
+
+        transform: translateY(70px) rotate(315deg);
+        border-bottom-left-radius: 50%;
+    }
+    91%{
+        border-radius: 0px;
+    }
+    100%{
+
+        transform: rotate(360deg);
+        border-radius: 0px;
+    }
+}
+
+@media (max-width:470px)
+{
+  #shadow{
+    top:61%;
+  }
+}
+
+@media (max-width:470px)
+{
+  #shadow{
+    top:63%;
+  }
+}
+
+@media (max-height:600px)
+{
+  #box{
+    top:35%;
+  }
+}
+
+@media (max-height:330px)
+{
+  #box{
+    top:15%;
+  }
+}
