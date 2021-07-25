@@ -1,0 +1,205 @@
+*{
+    padding:0px;
+  }
+  
+  body{
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(0deg, rgb(4, 4, 146),rgb(1, 1, 39),
+      rgb(0, 0, 12));
+      background-repeat:no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+  }
+  .container{
+      width: 100%;
+      height: 100vh;
+      z-index: -3;
+      position: fixed;
+  }
+  .star{
+      width: 3vmin;
+      height: 3vmin;
+      border: 2px solid white;
+      box-shadow: 1px 1px 20px 5px rgb(219, 215, 215);
+      border-radius: 50%;
+      margin: 30px;
+      background-color: white;
+      color:red;
+      font-size: 25px;
+      
+      animation-iteration-count: infinite;
+  }
+  
+  #pos1{
+      position: relative;
+      top: 45px;
+      left: 2vw;
+      animation-name: twinkle-1;
+      animation-duration: 1s;
+  }
+  #pos2{
+      position: relative;
+      top: -55px;
+      left: 80vw;
+      animation-name: twinkle-2;
+      animation-duration: 1s;
+  }
+  #pos3{
+      position: relative;
+      top: -10px;
+      left: 18vw;
+      animation-name: twinkle-3;
+      animation-duration: 1s;
+  }
+  #pos4{
+      position: relative;
+      top: -200px;
+      left: 30vw;
+      animation-name: twinkle-2;
+      animation-duration: 1s;
+  }
+  #pos5{
+      position: relative;
+      top: -305px;
+      left: 60vw;
+      animation-name: twinkle-1;
+      animation-duration: 1s;
+  }
+  #pos6{
+      position: relative;
+      top: -80px;
+      left: 56vw;
+      animation-name: twinkle-3;
+      animation-duration: 1s;
+  }
+  
+  #pos7{
+      position: relative;
+      top: -50px;
+      left: 5vw;
+      animation-name: twinkle-2;
+      animation-duration: 1s;
+  }
+  #pos8{
+      position: relative;
+      top: -95px;
+      left: 75vw;
+      animation-name: twinkle-1;
+      animation-duration: 1s;
+  }
+  #pos9{
+      position: relative;
+      top: -70px;
+      left: 56vw;
+      animation-name: twinkle-1;
+      animation-duration: 1s;
+  }
+  #pos10{
+      position: relative;
+      top: -50px;
+      left: 30vw;
+      animation-name: twinkle-2;
+      animation-duration: 1s;
+  }
+  
+  @keyframes twinkle-1 {
+      20% {
+        transform: scale(0.5);
+        opacity: 0.5;
+      }
+    }
+  
+    @keyframes twinkle-2 {
+      50% {
+        transform: scale(0.5);
+        opacity: 0.5;
+      }
+    }
+  
+  
+    @keyframes twinkle-3 {
+      60% {
+        transform: scale(0.5);
+        opacity: 0.5;
+      }
+    }
+  
+  
+    #survey{
+        color: white;
+        width: 99%;
+        margin: auto;
+      margin-bottom:200px;
+        position: relative;
+        top: 100px;
+    }
+  h1,h3{
+      text-align: center;
+      margin:auto;
+      width: 70%;
+  }
+  #title{
+      font-size: 2.4rem;
+  }
+  #subhead{
+      text-align: center;
+      font-size: 1.7rem;
+      font-weight: lighter;
+      color: rgb(173, 171, 171);
+  }
+  .feild{
+          display: block;
+          margin: 8px 8px;
+          padding: 5px;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .option{
+      display: block;
+  }
+  #sur{
+      width: 55%;
+      margin: 50px auto;
+      background-color: rgba(0,0,0,0.6);
+      border-radius: 4%;
+      padding: 2.9rem 3rem;
+      font-size: 1.5rem;
+  }
+  input[type=radio] , input[type=checkbox]
+  {
+      padding: 15px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+  }
+  .inp{
+      display: block;
+      width: 98%;
+      font-size: 1.3rem;
+      padding: 5px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+  
+  #sub{
+      width: 100%;
+      height: 2.5rem;
+      background-color: rgb(150, 103, 16);
+  }
+  textarea{
+      height: 4rem;
+  }
+  
+  @media(max-width:500px) {
+   
+    #sur{
+          padding: 0px;
+          width: 90%;
+      }
+    label{
+      margin-top:10px;
+    }
+  }
