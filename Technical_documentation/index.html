@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navbar">
+            <header>DS Tutorail</header>
+            <div id="nav">
+                <a href="#Ds_Introduction" class="nav-link">DS Introduction</a>
+                <a href="#Advantage_of_Data_Structure" class="nav-link">Advantage of Data Structure</a>
+                <a href="#Array" class="nav-link">Array</a>
+                <a href="#Need_Of_Using_Array" class="nav-link">Need Of Using Array</a>
+                <a href="#Memory_Allocation_of_the_array" class="nav-link">Memory Allocation of the array</a>
+                <a href="#Linked_List" class="nav-link">Linked List</a>
+                <a href="#What_is_Linked_List" class="nav-link">What is Linked List</a>
+                
+                <a href="#Advantage_of_linked_list" class="nav-link">Advantage of linked list</a>
+                <a href="#Stack" class="nav-link">Stack</a>
+                <a href="#Queue" class="nav-link">Queue</a>
+                <a href="#Tree" class="nav-link">Tree</a>
+                <a href="#Graph" class="nav-link">Graph</a>
+            </div>
+        </nav>
+        <main id="main-doc">
+
+            <section class="main-section" id="Ds_Introduction">
+                <header>Ds Introduction</header>
+                <p>Data Structures (DS) tutorial provides basic and advanced concepts of Data Structure. Our Data
+                    Structure tutorial is designed for beginners and professionals.</p>
+                <p>Our Data Structure tutorial includes all topics of Data Structure such as Array, Pointer, Structure,
+                    Linked List, Stack, Queue, Graph, Searching, Sorting, Programs, etc.</p>
+                <h4>Types of Data Structure</h4>
+                <ul>
+
+                    <li>Primitive
+                        <ul>
+
+                            <li>int</li>
+                            <li>char</li>
+                            <li>float</li>
+                            <li>Double</li>
+                            <li>Pointer</li>
+
+                        </ul>
+                    </li>
+                    <li>Non Primitive
+                        <ul>
+                            <li>Linear
+                                <ul>
+                                    <li>Arrays</li>
+                                    <li>Stacks</li>
+                                    <li>Queue</li>
+                                    <li>Linked List</li>
+                                </ul>
+                            </li>
+                            <li>Non Linear
+                                <ul>
+                                    <li>Tree</li>
+                                    <li>Graph</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </section>
+            <section class="main-section" id="Advantage_of_Data_Structure">
+                <header>Advantage Of Data Structure</header>
+                <p>The data structure name indicates itself that organizing the data in memory. There are many ways of organizing the data in the memory as we have already seen one of the data structures, i.e., array in C language. Array is a collection of memory elements in which data is stored sequentially, i.e., one after another. In other words, we can say that array stores the elements in a continuous manner. This organization of data is done with the help of an array of data structures. There are also other ways to organize the data in memory. Let's see the different types of data structures.</p>
+                <ul>
+                    <li><h4>Efficiency:</h4>If the choice of a data structure for implementing a particular ADT is proper, it makes the program very efficient in terms of time and space.</li>
+                    <li><h4>Reusability:</h4>The data structure provides reusability means that multiple client programs can use the data structure.</li>
+                    <li><h4>Abstraction:</h4>The data structure specified by an ADT also provides the level of abstraction. The client cannot see the internal working of the data structure, so it does not have to worry about the implementation part. The client can only see the interface.
+                    </li>
+                </ul>
+                
+            </section>
+            <section class="main-section" id="Array">
+                <header>Array</header>
+                <p>Arrays are defined as the collection of similar type of data items stored at contiguous memory locations.
+                    Arrays are the derived data type in C programming language which can store the primitive type of data such as int, char, double, float, etc.
+                    Array is the simplest data structure where each data element can be randomly accessed by using its index number.
+                    For example, if we want to store the marks of a student in 6 subjects, then we don't need to define different variable for the marks in different subject. instead of that, we can define an array which can store the marks in each subject at a the contiguous memory locations.</p>
+
+                    <h3>Properties of Array</h3>
+                    <ol>
+                        
+                        <li>Each element is of same data type and carries a same size i.e. int = 4 bytes.</li>
+                        <li>Elements of the array are stored at contiguous memory locations where the first element is stored at the smallest memory location.</li>
+                        <li>Elements of the array can be randomly accessed since we can calculate the address of each element of the array with the given base address and the size of data element.</li>
+                    </ol>
+                    <code>int arr[10]; char arr[10]; float arr[5] </code>
+                <p></p>
+            </section>
+            <section class="main-section" id="Need_Of_Using_Array">
+                <header>Need Of Using Array</header>
+                <p>In computer programming, the most of the cases requires to store the large number of data of similar type. To store such amount of data, we need to define a large number of variables. It would be very difficult to remember names of all the variables while writing the programs. Instead of naming all the variables with a different name, it is better to define an array and store all the elements into it.</p>p
+<p>
+                    Following example illustrates, how array can be useful in writing code for a particular problem.</p>
+
+                    <h3>Program without array</h3>
+                    
+                    <code>#include <stdio.h>  <br>
+                        void main ()  <br>
+                        {  <br>
+                            int marks_1 = 56, marks_2 = 78, marks_3 = 88, marks_4 = 76, marks_5 = 56, marks_6 = 89;  
+                            <br> 
+                            float avg = (marks_1 + marks_2 + marks_3 + marks_4 + marks_5 +marks_6) / 6 ;  <br> 
+                            printf(avg);  <br> 
+                        } <br> </code>
+                    <h3>Program by using array</h3>
+                    
+                    <code>#include <stdio.h>  <br>
+                        void main ()  <br>
+                        {  <br>
+                            int marks[6] = {56,78,88,76,56,89);  <br>
+                            int i;    <br>
+                            float avg;  <br>
+                            for (i=0; i<6; i++ )   <br>
+                            {  <br>
+                                avg = avg + marks[i];   <br>
+                            }    <br>
+                            printf(avg);   <br>
+                        }  <br>
+                     </code>
+            </section>
+            <section class="main-section" id="Memory_Allocation_of_the_array">
+                <header>Memory Allocation of the array</header>
+                <p>As we have mentioned, all the data elements of an array are stored at contiguous locations in the main memory. The name of the array represents the base address or the address of first element in the main memory. Each element of the array is represented by a proper indexing.
+
+                    The indexing of the array can be defined in three ways.</p>
+                <ol>
+                    <li>0 (zero - based indexing) : The first element of the array will be arr[0].</li>
+                    <li>1 (one - based indexing) : The first element of the array will be arr[1].</li>
+                    <li>n (n - based indexing) : The first element of the array can reside at any random index number.</li>
+                </ol>
+                <p>In 0 based indexing, If the size of an array is n then the maximum index number, an element can have is n-1. However, it will be n if we use 1 based indexing.</p>
+            </section>
+            <section class="main-section" id="Linked_List">
+                <header>Linked List</header>
+                <p>Before understanding the linked list concept, we first look at why there is a need for a linked list.</p>
+                <p>If we want to store the value in a memory, we need a memory manager that manages the memory for every variable. For example, if we want to create a variable of integer type like:</p>
+                <code>int x; </code>
+                <p>In the above example, we have created a variable 'x' of type integer. As we know that integer variable occupies 4 bytes, so 'x' variable will occupy 4 bytes to store the value.</p>
+                <p>Suppose we want to create an array of integer type like:</p>
+                <code>int x[3]; </code>
+                <p>In the above example, we have declared an array of size 3. As we know, that all the values of an array are stored in a continuous manner, so all the three values of an array are stored in a sequential fashion. The total memory space occupied by the array would be 3*4 = 12 bytes.</p>
+                <h3>There are two major drawbacks of using array:</h3>
+                <ul>
+                    <li>We cannot insert more than 3 elements in the above example because only 3 spaces are allocated for 3 elements.</li>
+                    <li>In the case of an array, lots of wastage of memory can occur. For example, if we declare an array of 50 size but we insert only 10 elements in an array. So, in this case, the memory space for other 40 elements will get wasted and cannot be used by another variable as this whole space is occupied by an array.</li>
+                </ul>
+                <p>In array, we are providing the fixed-size at the compile-time, due to which wastage of memory occurs. The solution to this problem is to use the linked list.</p>
+            </section>
+            <section class="main-section" id="What_is_Linked_List">
+                <header>What is Linked List</header>
+                <p>A linked list is also a collection of elements, but the elements are not stored in a consecutive location.
+
+                    Suppose a programmer made a request for storing the integer value then size of 4-byte memory block is assigned to the integer value. The programmer made another request for storing 3 more integer elements; then, three different memory blocks are assigned to these three elements but the memory blocks are available in a random location. So, how are the elements connected?.
+                    
+                    These elements are linked to each other by providing one additional information along with an element, i.e., the address of the next element. The variable that stores the address of the next element is known as a pointer. Therefore, we conclude that the linked list contains two parts, i.e., the first one is the data element, and the other is the pointer. The pointer variable will occupy 4 bytes which is pointing to the next element.</p>
+                <p>The declaration of an array is very simple as it is of single type. But the linked list contains two parts, which are of two different types, i.e., one is a simple variable, and the second one is a pointer variable. We can declare the linked list by using the user-defined data type known as structure.</p>
+                <p>The structure of a linked list can be defined as:</p>
+                <code>struct node <br>  
+                    {  <br>
+                       int data;  <br>
+                       struct node *next;  <br>
+                    }  <br></code>
+                    <p>In the above declaration, we have defined a structure named as a node consisting of two variables: an integer variable (data), and the other one is the pointer (next), which contains the address of the next node.</p>
+            </section>
+            <section class="main-section" id="Advantage_of_linked_list">
+                <header>Advantage of linked list</header>
+                <h3>The following are the advantages of using a linked list over an array:</h3>
+                <ul>
+                    <li><h4>Dynamic data structure:</h4> The size of the linked list is not fixed as it can vary according to our requirements.</li>
+                    <li><h4>Insertion and Deletion:</h4> Insertion and deletion in linked list are easier than array as the elements in an array are stored in a consecutive location. In contrast, in the case of a linked list, the elements are stored in a random location. The complexity for insertion and deletion of elements from the beginning is O(1) in the linked list, while in the case of an array, the complexity would be O(n). If we want to insert or delete the element in an array, then we need to shift the elements for creating the space. On the other hand, in the linked list, we do not have to shift the elements. In the linked list, we just need to update the address of the pointer in the node.</li>
+                    <li><h4>Memory efficient:</h4> Its memory consumption is efficient as the size of the linked list can grow or shrink according to our requirements.</li>
+                    <li><h4>implementation:</h4> Both the stacks and queues can be implemented using a linked list.</li>
+                </ul>
+            </section>
+            <section class="main-section" id="Stack">
+                <header>Stack</header>
+                <p>A Stack is a linear data structure that follows the LIFO (Last-In-First-Out) principle. Stack has one end, whereas the Queue has two ends (front and rear). It contains only one pointer top pointer pointing to the topmost element of the stack. Whenever an element is added in the stack, it is added on the top of the stack, and the element can be deleted only from the stack. In other words, a stack can be defined as a container in which insertion and deletion can be done from the one end known as the top of the stack.</p>
+
+                <h4>Some key points related to stack</h4>
+
+                <ul>
+                    <li>It is called as stack because it behaves like a real-world stack, piles of books, etc.</li>
+                    <li>A Stack is an abstract data type with a pre-defined capacity, which means that it can store the elements of a limited size.</li>
+                    <li>It is a data structure that follows some order to insert and delete the elements, and that order can be LIFO or FILO.</li>
+                </ul>
+
+                <h4>Working of Stack</h4>
+                <p>Stack works on the LIFO pattern. As we can observe in the below figure there are five memory blocks in the stack; therefore, the size of the stack is 5.
+
+                    Suppose we want to store the elements in a stack and let's assume that stack is empty. We have taken the stack of size 5 as shown below in which we are pushing the elements one by one until the stack becomes full.</p>
+
+                    <h4>Standard Stack Operations</h4>
+                    <ul>
+                        <li>push()</li>
+                        <li>pop()</li>
+                        <li>isEmpty()</li>
+                        <li>isFull()</li>
+                        <li>peek()</li>
+                        <li>count()</li>
+                        <li>change()</li>
+                        <li>display()</li>
+                    </ul>
+            </section>
+            <section class="main-section" id="Queue">
+                <header>Queue</header>
+                <ol>
+                    <li>A queue can be defined as an ordered list which enables insert operations to be performed at one end called REAR and delete operations to be performed at another end called FRONT.</li>
+                    <li>Queue is referred to be as First In First Out list.</li>
+                    <li>For example, people waiting in line for a rail ticket form a queue.</li>
+                </ol>
+                <h3>Applications of Queue</h3>
+                <p>Due to the fact that queue performs actions on first in first out basis which is quite fair for the ordering of actions. There are various applications of queues discussed as below.</p>
+                <ol>
+                    <li>Queues are widely used as waiting lists for a single shared resource like printer, disk, CPU.</li>
+                    <li>Queues are used in asynchronous transfer of data (where data is not being transferred at the same rate between two processes) for eg. pipes, file IO, sockets.</li>
+                    <li>Queues are used as buffers in most of the applications like MP3 media player, CD player, etc.</li>
+                    <li>Queue are used to maintain the play list in media players in order to add and remove the songs from the play-list.</li>
+                    <li>Queues are used in operating systems for handling interrupts.</li>
+                </ol>
+            </section>
+            <section class="main-section" id="Tree">
+                <header>Tree</header>
+                <p>We read the linear data structures like an array, linked list, stack and queue in which all the elements are arranged in a sequential manner. The different data structures are used for different kinds of data.</p>
+                <h4>Some factors are considered for choosing data Structure</h4>
+                <ul>
+                    <li>What type of data needs to be stored?: It might be a possibility that a certain data structure can be the best fit for some kind of data.</li>
+                    <li>Cost of operations: If we want to minimize the cost for the operations for the most frequently performed operations. For example, we have a simple list on which we have to perform the search operation; then, we can create an array in which elements are stored in sorted order to perform the binary search. The binary search works very fast for the simple list as it divides the search space into half.</li>
+                    <li>Memory usage: Sometimes, we want a data structure that utilizes less memory.</li>
+                </ul>
+                <h3>Key Points about Tree</h3>
+                <ul>
+                    <li>A tree data structure is defined as a collection of objects or entities known as nodes that are linked together to represent or simulate hierarchy.</li>
+                    <li>A tree data structure is a non-linear data structure because it does not store in a sequential manner. It is a hierarchical structure as elements in a Tree are arranged in multiple levels.</li>
+                    <li>In the Tree data structure, the topmost node is known as a root node. Each node contains some data, and data can be of any type. In the above tree structure, the node contains the name of the employee, so the type of data would be a string.</li>
+                    <li>Each node contains some data and the link or reference of other nodes that can be called children.</li>
+                </ul>
+                <h3>implementation:</h3>
+                <code>struct node <br> 
+                    {  <br>
+                      int data; <br>  
+                    struct node *left; <br> 
+                    struct node *right;   <br>
+                    } <br> </code>
+                <p></p>
+                <p></p>
+            </section>
+            <section class="main-section" id="Graph">
+                <header>Graph</header>
+                <p>A graph can be defined as group of vertices and edges that are used to connect these vertices. A graph can be seen as a cyclic tree, where the vertices (Nodes) maintain any complex relationship among them instead of having parent child relationship.</p>
+                <h3>Definition</h3>
+                <p>A graph G can be defined as an ordered set G(V, E) where V(G) represents the set of vertices and E(G) represents the set of edges which are used to connect these vertices.</p>
+                <p>A Graph G(V, E) with 5 vertices (A, B, C, D, E) and six edges ((A,B), (B,C), (C,E), (E,D), (D,B), (D,A)) is shown in the following figure.</p>
+                <h3>Directed and Undirected Graph</h3>
+                <p>A graph can be directed or undirected. However, in an undirected graph, edges are not associated with the directions with them. An undirected graph is shown in the above figure since its edges are not attached with any of the directions. If an edge exists between vertex A and B then the vertices can be traversed from B to A as well as A to B.</p>
+                <p>In a directed graph, edges form an ordered pair. Edges represent a specific path from some vertex A to another vertex B. Node A is called initial node while node B is called terminal node.</p>
+            </section>
+        </main>
+
+    </div>
+</body>
+
+</html>
