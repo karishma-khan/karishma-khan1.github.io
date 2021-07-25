@@ -1,0 +1,112 @@
+html,body{
+    height: 98%;
+}
+body{
+    background-image: url(https://images.designtrends.com/wp-content/uploads/2017/02/Black-Background-Designs.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#navbar{
+    /* display: inline-block; */
+    float: left;
+    background-attachment: fixed;
+    width: 20%;
+}
+#navbar a{
+    
+    display: block;
+    width: auto;
+    text-align: left;
+    padding: 20px 10px;
+    text-decoration: none;
+    font-size: large;
+    color: rgb(165, 164, 164);
+    border-bottom: 1px solid rgb(136, 132, 132);
+    /* background-color: rgb(66, 172, 33); */
+}
+
+#nav{
+    position: relative;
+    top: 100px;
+    height:80vh;
+    overflow-y: scroll;
+    
+    border-right: 4px solid rgb(104, 103, 103);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#navbar a:hover{
+    color: white;
+    background-color: rgba(160, 100, 100, 0.8);
+}
+header{
+    font-size: xx-large;
+}
+#navbar header{
+    
+    display: block;
+    width: 20%;
+    text-align: center;
+    margin: auto;
+    font-size: x-large;
+    padding: 30px 0px;
+    position: fixed;
+    color: blanchedalmond;
+    background-color:rgb(87, 84, 84) ;
+}
+
+#main-doc{
+    padding-top: 40px;
+    width: 77%;
+    float: right;
+    color: white;
+    height: 90vh;
+    overflow-y: scroll;
+    font-family: 'Times New Roman', Times, serif;
+    /* padding-left: 30px; */
+}
+p,li{
+    font-size: large;
+    color:rgb(206, 204, 204);
+}
+p{
+    padding-left: 15px;
+}
+li{
+    margin:10px;
+}
+
+
+code{
+    display: block;
+    background-color: rgb(87, 84, 84);
+    color: white;
+    font-size: large;
+    padding:20px 30px;
+}
+@media (max-width:600px) {
+    #nav{
+        position: inherit;
+        height: auto;
+        width: 99%;
+    }
+    #navbar header{
+        width: 100%;
+        position: inherit;
+        display: block;
+        margin: 0px;
+    }
+    #navbar{
+        float: none;
+        height: auto;
+        width: 99%;
+    }
+    
+    #main-doc{
+        float: none;
+        padding-left: 5px;
+        height: auto;
+        width: auto;
+    }
+}
