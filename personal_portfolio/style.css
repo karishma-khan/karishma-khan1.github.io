@@ -1,0 +1,239 @@
+*{
+    margin: 0px;
+}
+#navbar ul{
+    
+    padding: 15px 15px;
+    float: right;
+}
+#navbar li{
+    display: inline;
+    
+    padding: 10px 0px;
+}
+#navbar a{
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 30px;
+    color: white;
+    border-radius: 3px;
+}
+#navbar{
+    z-index: 1000;
+    display: block;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    color: white;
+    background-color: black;
+    border-bottom: 4px solid rgb(53, 53, 52);
+
+}
+#navbar a:hover{
+    background-color: rgb(53, 52, 52);
+}
+#welcome-section{
+    height: 100vh;
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#mid{
+    height: 70vh;
+    width: 78vw;
+    margin: auto;
+    /* border: 3px solid red; */
+    position: relative;
+    top: 100px;    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+}
+#mid h1,h2{
+    display: block;
+    text-align: center;
+    width:90%;
+    margin: auto; 
+     position: absolute;
+     top: 40%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+}
+#mid h2{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+#projects{
+    height: 100vh;
+    background-image: url(
+        https://www.desktopbackground.org/p/2014/01/12/700190_cool-wallpapers-hd-1920x1080-best-hd-desktop-wallpapers-1080p-hd_1920x1080_h.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+#flex-con{
+    height: 70vh;
+    width: 90vw;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#projhead{
+    text-align: center;
+    font-size: 30px;
+}
+
+#proj{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    /* flex-wrap: wrap; */
+}
+.project-tile{
+    width: 300px;
+    margin: 25px;
+    height: 350px;
+    border: 4px solid white;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border-radius: 10px;
+    display: block;
+}
+
+.image{
+    width: 100%;
+    height: 89%;
+    image-rendering: optimizeQuality;
+
+}
+
+.imgtext{
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+    background-color: rgb(65, 60, 60);
+}
+.image a{
+    text-decoration:none;
+}
+
+#contact{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://www.teahub.io/photos/full/5-57002_colorful-high-resolution-background-g-five-mobile-models.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+#contact div{
+    width: 80%;
+    align-items: center;  
+    border: 2px solid rgb(196, 193, 193);
+    background-color: rgba(196, 193, 193, 0.2);
+    border-radius: 20px;
+}
+#contact h1{
+    font-size: 60px;
+    
+    text-align: center;
+}
+#contact p{
+    text-align: center;
+    font-size: 30px;
+}
+
+/* .ig{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+} */
+
+footer{
+    height: 20%;
+    background-color: rgb(88, 85, 85);
+    width: 100%;
+}
+footer p{
+    text-align: center;
+    font-size: x-large;
+}
+@media (max-width:810px){
+    #mid {
+        font-size: 35px;
+    }
+    #mid h1{
+        top: 30%;
+    }
+    #mid h2{
+        top: 70%;
+    }
+}
+@media (max-width:450px){
+    #navbar a{
+        font-size: 25px;
+        padding: 8px;
+    }
+    #mid h1,h2{
+        font-size: 60px;
+        word-wrap: break-word;
+    }
+    #mid h1{
+        top: 30%;
+    }
+    #mid h2{
+        top: 75%;
+        font-size: 30px;
+    }
+}
+
+@media (max-width:389px){
+    #navbar a{
+        font-size: 25px;
+        padding: 4px;
+    }
+    #mid h1,h2{
+        font-size: 50px;
+        word-wrap: break-word;
+    }
+    #mid h1{
+        top: 35%;
+    }
+    #mid h2{
+        top: 80%;
+        font-size: 30px;
+    }
+    .flexbox{
+        width: 90%;
+        
+        height: 50%;
+    }
+    .image{
+        width: 100%;
+    }
+    .imgtext{
+        font-size: x-large;
+    }
+    #proj{
+        margin-top: 10px;
+    }
+    #flex-con{
+        top: 40%;
+    }
+}
