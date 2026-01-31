@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Facebook Login Test</title>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_US/sdk.js"></script>
+</head>
+<body>
+
+<h2>Facebook Login Test</h2>
+
+<button onclick="loginWithFacebook()">Login with Facebook</button>
+
+<textarea id="tokenBox" rows="10" cols="80"></textarea>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1456229405881762',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v19.0'
+    });
+  };
+
+  function loginWithFacebook() {
+    FB.login(function(response) {
+      if (response.authResponse) {
+        const accessToken = response.authResponse.accessToken;
+        console.log("Access Token:", accessToken);
+        document.getElementById("tokenBox").value = accessToken;
+      }
+    }, {scope: 'public_profile,email'});
+  }
+</script>
+
+</body>
+</html>
